@@ -1,0 +1,13 @@
+version: '3.8'
+services:
+  api:
+    build:
+      context: .
+    volumes:
+      - .:/usr/src/app
+    # command: /bin/sh -c "tail -f /dev/null"
+    command: npm run dev
+    ports:
+      - "3000:3000"
+    environment:
+      NODE_ENV: development
